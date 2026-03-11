@@ -4,8 +4,8 @@ from Model.gold_features import build_dataset
 def predict_gold_10_days():
     dataset = build_dataset()
 
-    model = joblib.load("../targets/gold_model_target_10d.pkl")
-    features = joblib.load("../targets/features.pkl")
+    model = joblib.load("targets/gold_model_target_10d.pkl")
+    features = joblib.load("targets/features.pkl")
 
     X_new = dataset[features].iloc[-1:]
 
